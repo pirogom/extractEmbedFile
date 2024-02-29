@@ -55,8 +55,8 @@ func Extract(basePath string, fname string, data []byte, isExcute bool, checkUpd
 		}
 	} else if checkUpdate {
 
-		oldHash := getFileHash(fp)
-		newHash := getBufHash(data)
+		oldHash := GetFileHash(fp)
+		newHash := GetBufHash(data)
 
 		// 다른 파일
 		if oldHash != newHash {
